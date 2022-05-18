@@ -1,0 +1,16 @@
+# INTELLIJ
+.idea/
+*.ipr
+*.iml
+
+# SYSTEM FILES
+*~
+.DS_STORE
+
+# GRADLE
+.gradle
+build/
+.gradletasknamecache
+
+# JS
+node_modules/
