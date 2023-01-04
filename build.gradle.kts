@@ -1,11 +1,11 @@
 plugins {
-    kotlin("multiplatform") version "1.7.10"
-    id("org.jetbrains.compose") version "1.2.0"
+    kotlin("multiplatform") version "1.7.20"
+    id("org.jetbrains.compose") version "1.2.2"
     `maven-publish`
 }
 
 group = "org.kodein.cic"
-version = "1.1.0"
+version = "1.2.0"
 
 allprojects {
     repositories {
