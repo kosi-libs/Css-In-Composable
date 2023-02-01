@@ -11,7 +11,7 @@ kotlin {
     }
 
     sourceSets {
-        val jsMain by getting {
+        named("jsMain") {
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.web.svg)

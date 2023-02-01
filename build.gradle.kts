@@ -1,11 +1,11 @@
 plugins {
-    kotlin("multiplatform") version "1.7.20"
-    id("org.jetbrains.compose") version "1.2.2"
+    kotlin("multiplatform") version "1.8.0"
+    id("org.jetbrains.compose") version "1.3.0"
     `maven-publish`
 }
 
 group = "org.kodein.cic"
-version = "1.2.0"
+version = "1.3.0"
 
 allprojects {
     repositories {
@@ -23,7 +23,7 @@ kotlin {
     }
 
     sourceSets {
-        val jsMain by getting {
+        named("jsMain") {
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.web.svg)
@@ -33,7 +33,6 @@ kotlin {
 
         all {
             languageSettings {
-                optIn("kotlin.RequiresOptIn")
                 optIn("org.jetbrains.compose.web.ExperimentalComposeWebApi")
                 optIn("kotlin.time.ExperimentalTime")
             }

@@ -1,17 +1,24 @@
 import androidx.compose.runtime.*
-import kotlinx.browser.document
 import kotlinx.coroutines.delay
-import kotlinx.dom.addClass
-import kotlinx.dom.removeClass
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposableInBody
 import org.kodein.cic.*
-import org.w3c.dom.HTMLHtmlElement
-import org.w3c.dom.get
 import kotlin.time.Duration.Companion.milliseconds
 
+
+@Composable
+fun BadUsage() {
+    var add: Double by remember { mutableStateOf(0.0) }
+    Button({
+        css {
+            fontSize((1 + add).cssRem)
+        }
+        onClick { add += 0.05 }
+    }) { Text("Click me!") }
+}
 
 @Composable
 fun ColoredDiv(text: String) {
@@ -94,6 +101,7 @@ fun test() {
 
         Counter()
         Counter()
+        BadUsage()
     }
 }
 
