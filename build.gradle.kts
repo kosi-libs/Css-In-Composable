@@ -1,6 +1,7 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    kotlin("multiplatform") version "1.8.0"
-    id("org.jetbrains.compose") version "1.3.0"
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.compose)
     `maven-publish`
 }
 
