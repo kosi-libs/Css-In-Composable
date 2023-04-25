@@ -1,4 +1,4 @@
-package org.kodein.cic
+package org.kodein.compose.html.css
 
 import org.jetbrains.compose.web.css.*
 

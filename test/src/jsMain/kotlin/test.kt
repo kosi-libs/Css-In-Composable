@@ -5,7 +5,9 @@ import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposableInBody
-import org.kodein.cic.*
+import org.kodein.compose.html.css.animation
+import org.kodein.compose.html.css.css
+import org.kodein.compose.html.css.globalHtmlCss
 import kotlin.time.Duration.Companion.milliseconds
 
 

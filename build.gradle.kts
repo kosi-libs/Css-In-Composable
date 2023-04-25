@@ -3,6 +3,6 @@ plugins {
 }
 
 allprojects {
-    group = "org.kodein.cic"
+    group = "org.kodein.compose.html.css"
     version = "1.4.0"
 }

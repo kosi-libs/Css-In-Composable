@@ -1,4 +1,4 @@
-package org.kodein.cic
+package org.kodein.compose.html.css
 
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.*
