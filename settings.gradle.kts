@@ -1,5 +1,18 @@
-rootProject.name = "css-in-composable"
+buildscript {
+    repositories {
+        mavenLocal()
+        maven(url = "https://raw.githubusercontent.com/kosi-libs/kodein-internal-gradle-plugin/mvn-repo")
+    }
+    dependencies {
+        classpath("org.kodein.internal.gradle:kodein-internal-gradle-settings:8.0.1")
+    }
+}
+
+apply { plugin("org.kodein.settings") }
+
+rootProject.name = "Kosi-CiC"
 
 include(
-    ":test"
+    "css-in-composable",
+    "test"
 )

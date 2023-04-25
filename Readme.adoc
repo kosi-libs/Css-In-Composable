@@ -1,0 +1,42 @@
+= Css In Composable
+
+This library is meant to be used with https://github.com/JetBrains/compose-multiplatform#compose-html[Compose-HTML].
+
+CiC allows you to define CSS (as opposed to Style) directly into HTML Composables.
+It basically does the same thing as https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-styled-next:[Kotlin Wrapper Styled Components], but for Compose-HTML.
+
+In addition to regular element style, it allows you to style children and pseudo-classes.
+
+Have a look at that example:
+
+[source,kotlin]
+----
+@Composable
+fun ColoredDiv(text: String) {
+    Div({
+        css {
+            //<1>
+            backgroundColor(Color.blue)
+            padding(1.em)
+            textAlign("center")
+
+            (self + hover) { //<2>
+                backgroundColor(Color.red)
+            }
+
+            "a" { //<3>
+                backgroundColor(Color.orange)
+                textDecoration("none")
+            }
+        }
+    }) {
+        Text(text)
+    }
+}
+----
+<1> Basic style
+<2> Self + pseudo-class
+<3> Children
+
+You should only use `css` for "immutable" style.
+As a new CSS class is generated every time the content changes, you should use `style` for regularly changing style.

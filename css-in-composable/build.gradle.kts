@@ -1,5 +1,5 @@
 plugins {
-    kodein.mpp
+    kodein.library.mpp
     alias(libs.plugins.compose)
 }
 
@@ -9,9 +9,7 @@ kotlin.kodein {
         sources.mainDependencies {
             implementation(kotlin.compose.html.core)
             implementation(kotlin.compose.runtime)
-            implementation(projects.cssInComposable)
         }
-        target.binaries.executable()
     }
 }
 
@@ -20,4 +18,9 @@ kotlin.sourceSets.all {
         optIn("org.jetbrains.compose.web.ExperimentalComposeWebApi")
         optIn("kotlin.time.ExperimentalTime")
     }
+}
+
+kodeinUpload {
+    name = "Css-In-Composable"
+    description = "Css classes generated in Compose-HTML composables"
 }
