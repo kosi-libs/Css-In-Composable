@@ -9,6 +9,10 @@ It basically does the same thing as https://github.com/JetBrains/kotlin-wrappers
 
 In addition to regular element style, it allows you to style children and pseudo-classes.
 
+**IMPORTANT**: You should only use `css` for **immutable** style.
+As a new CSS class is generated every time the content changes, you should use `style` for changing style.
+
+
 == Install
 
 .build.gradle.kts
@@ -18,6 +22,7 @@ dependencies {
     implementation("org.kodein.compose.html.css:css-in-composable:{version}")
 }
 ----
+
 
 == Example
 
@@ -51,6 +56,3 @@ fun ColoredDiv(text: String) {
 <1> Basic style
 <2> Self + pseudo-class
 <3> Children
-
-You should only use `css` for "immutable" style.
-As a new CSS class is generated every time the content changes, you should use `css` for regularly changing style.
