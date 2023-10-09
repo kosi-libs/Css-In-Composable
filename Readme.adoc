@@ -1,6 +1,6 @@
 = Css In Composable
 :icons: font
-:version: 1.4.0
+:version: 1.5.0
 
 This library is meant to be used with https://github.com/JetBrains/compose-multiplatform#compose-html[Compose-HTML].
 

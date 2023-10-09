@@ -11,6 +11,9 @@ kotlin.kodein {
             implementation(kotlin.compose.runtime)
         }
     }
+    // NOT USED - Workaround to make Dokka happy in MPP JS Only projects
+    // https://github.com/Kotlin/dokka/issues/3122
+    jvm()
 }
 
 kotlin.sourceSets.all {
