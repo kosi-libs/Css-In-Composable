@@ -4,5 +4,5 @@ plugins {
 
 allprojects {
     group = "org.kodein.compose.html.css"
-    version = "1.5.0"
+    version = "1.6.0"
 }
