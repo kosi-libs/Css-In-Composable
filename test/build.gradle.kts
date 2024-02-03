@@ -10,6 +10,7 @@ kotlin.kodein {
             implementation(kotlin.compose.html.core)
             implementation(kotlin.compose.runtime)
             implementation(projects.cssInComposable)
+            implementation(libs.kotlinx.coroutinesCore)
         }
         target.binaries.executable()
     }

@@ -1,5 +1,9 @@
 [versions]
 compose = "1.6.0-alpha01"
+coroutines = "1.7.3"
 
 [plugins]
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+
+[libraries]
+kotlinx-coroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
