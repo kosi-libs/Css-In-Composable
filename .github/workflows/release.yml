@@ -16,7 +16,7 @@ jobs:
         with:
           base_url: https://s01.oss.sonatype.org/service/local/
           username: ${{ secrets.SONATYPE_USERNAME }}
-          password: ${{ secrets.SONATYPE_PASSWORD }}
+          password: ${{ secrets.SONATYPE_TOKEN_PASSWORD }}
           staging_profile_id: ${{ secrets.SONATYPE_PROFILE_ID }}
           description: ${{ github.repository }}/${{ github.workflow }}#${{ github.run_number }}
 
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-      SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+      SONATYPE_PASSWORD: ${{ secrets.SONATYPE_TOKEN_PASSWORD }}
       GPG_PRIVATE_KEY: ${{ secrets.PGP_SIGNING_KEY }}
       GPG_PRIVATE_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
     steps:
